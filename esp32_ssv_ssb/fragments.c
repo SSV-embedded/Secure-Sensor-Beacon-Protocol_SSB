@@ -35,7 +35,7 @@ static u8_t key[] = "SuperSecretKey16";
 
 void _add_hmac(){
   int err;
-  u16_t vendor = 0x0059; // Manufacture ID
+  u16_t vendor = 0x0ad3; // SSV Manufacturer ID
   u8_t prototype = 0x40;
   blake2s_state b2s_state;
   err = blake2s_init_key(&b2s_state, FRAG_SIZE_HMAC, key, strlen(key));
@@ -59,7 +59,7 @@ frag_t * frag_init(u32_t start_seq){
   lastFrag = 1;
   frag_num = 0x00;
 
-  *vendor = 0x0059; // Manufacture ID
+  *vendor = 0x0ad3; // SSV Manufacturer ID
   *prototype = 0x40; // Protokoll ID
 
   return &cur_frag;
