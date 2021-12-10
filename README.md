@@ -118,7 +118,7 @@ An SSB device like SSV's SFS/BE1 broadcasts its sensor data by default in an adv
 
 **Example of a complete advertising packet of an SFS/BE1 with BME680 sensor:**
 
-`0x0201041BFF590040206B080004841F85A941048812C3C942048CBCF4614204`
+`0x0201041BFFD30A40206B080004841F85A941048812C3C942048CBCF4614204`
 
 The advertising packet is devided into following chunks:
 
