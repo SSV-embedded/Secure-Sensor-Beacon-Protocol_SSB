@@ -30,7 +30,7 @@ The following figure shows the structure of an SSV/SSB beacon.
 
 ## Details
 ### Manufacturer ID
-This field is used for the manufacturer ID as assigned by the Bluetooth SIG. For instance, the SFS/BE1 uses `0x0059` (Nordic Semiconductor ASA).
+This field is used for the manufacturer ID as assigned by the Bluetooth SIG. For instance, the SFS/BE1 uses `0x0ad3` (SSV Software Systems GmbH).
 
 ### Packet Type
 The value of this field specifies which hash function is used to create the HMAC.
@@ -122,7 +122,7 @@ An SSB device like SSV's SFS/BE1 broadcasts its sensor data by default in an adv
 
 The advertising packet is devided into following chunks:
 
-`0x02 01 04` `1B` `FF` `5900` `40` `206B0800` `04841F85A941 048812C3C942 048CBCF46142 04`
+`0x02 01 04` `1B` `FF` `D30A` `40` `206B0800` `04841F85A941 048812C3C942 048CBCF46142 04`
 
 The particular chunks are interpreted as follows:
 
@@ -135,10 +135,10 @@ The particular chunks are interpreted as follows:
 ---
 
 ### SSV/SSB Specific Payload
-`0x1B` `FF` `5900` `40` `206B0800` `04841F85A941 048812C3C942 048CBCF46142 04`
+`0x1B` `FF` `D30A` `40` `206B0800` `04841F85A941 048812C3C942 048CBCF46142 04`
 * `0x1B`: **Payload Length** -> 28 bytes = 1 byte length + 27 bytes payload 
 * `0xFF`: **ADV Type** -> Here: Manufacturer specific data
-* `0x5900`: **Manufacturer ID** (LSB first) -> Here: Nordic Semiconductor ASA
+* `0xD30A`: **Manufacturer ID** (LSB first) -> Here: SSV Software Systems GmbH
 * `0x40`: **Packet Type** -> Here: BLAKE2s
 * `0x206B0800`: **Sequence Number + Fragment Number** (LSB first) -> `0x00086B20` -> `0b10000110101100100000`<br/>
    * Take the *bits 0..4 of the LSB* to get the information about the fragment counter -> `0b00000`<br/>
