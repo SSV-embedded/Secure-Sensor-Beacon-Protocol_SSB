@@ -201,10 +201,12 @@ void loop() {
     char buffer_array[FRAG_MAX_SIZE_ADV_DATA];
     memcpy(buffer_array, cur_frag->data, cur_frag->len);
     std::string advertisement_str( buffer_array, cur_frag->len );
+     
+    //set the flags first
+    advert.setFlags(0x04);
+     
     //set the data as manufacturer data
     advert.setManufacturerData(advertisement_str);
-    //set the flags
-    advert.setFlags(0x04);
 
     pAdvertising->setAdvertisementData(advert);
     pAdvertising->start(); 
