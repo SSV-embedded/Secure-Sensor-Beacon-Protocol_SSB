@@ -97,19 +97,19 @@ This 8-bit value is used to identify the type of sensor or physical unit. The id
 #### Global Sensor Types
 These definitions are examples for the SFS/BE1 of SSV.
 
-| Parameter          | Sensor    | Bits       | Hex  |
-| --------------:    | --------- | ---------- | ---- |
-| Magnetic field (x) | BMM150    | 1 00000 00 | 0x80 |
-| Magnetic field (y) | BMM150    | 1 00000 01 | 0x81 |
-| Magnetic field (z) | BMM150    | 1 00000 10 | 0x82 |
-| Temperature        | BME680    | 1 00001 00 | 0x84 |
-| Pressure           | BME680    | 1 00010 00 | 0x88 |
-| Humidity           | BME680    | 1 00011 00 | 0x8C |
-| Gas resistance     | BME680    | 1 00100 00 | 0x90 |
-| CO2                | CCS811    | 1 00110 00 | 0x98 |
-| VOC                | CCS811    | 1 00111 00 | 0x9C |
-| Amb. light (lux)   | OPT3001   | 1 01000 00 | 0xA0 |
-| Power fail         | ---       | 1 11111 11 | 0xFF |
+| Parameter          | Sensor    | Bits       | Hex  | Sensor JSON Name |
+| --------------:    | --------- | ---------- | ---- | ---------------- |
+| Magnetic field (x) | BMM150    | 1 00000 00 | 0x80 | mag-x            |
+| Magnetic field (y) | BMM150    | 1 00000 01 | 0x81 | mag-y            |
+| Magnetic field (z) | BMM150    | 1 00000 10 | 0x82 | mag-z            |
+| Temperature        | BME680    | 1 00001 00 | 0x84 | temp             |
+| Pressure           | BME680    | 1 00010 00 | 0x88 | pressure         |
+| Humidity           | BME680    | 1 00011 00 | 0x8C | hum              |
+| Gas resistance     | BME680    | 1 00100 00 | 0x90 | gas-resistance   |
+| CO2                | CCS811    | 1 00110 00 | 0x98 | co2              |
+| VOC                | CCS811    | 1 00111 00 | 0x9C | voc              |
+| Amb. light (lux)   | OPT3001   | 1 01000 00 | 0xA0 | light            |
+| Power fail         | ---       | 1 11111 11 | 0xFF | pof              |
 
 ## Example Beacon
 While the Bluetooth SIG has defined standard ways to represent sensor data via Generic Attribute Profile (GATT) connection, there is no such standard for broadcasting the sensor information. Advantages of broadcasting sensor data are simplicity, as there is no connection negotiation required and density, as a single receiver can listen to hundreds of sensors.
