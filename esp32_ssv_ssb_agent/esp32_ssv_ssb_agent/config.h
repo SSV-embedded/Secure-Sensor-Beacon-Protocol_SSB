@@ -12,8 +12,8 @@ const int restoreButton = 19;
 
 //WiFi config
 const int WIFI_RETRY_DELAY = 300000;//milliseconds
-const char *WLAN_AP_SSID = "ssb-agent-";      //"ssv-embedded.de Dev";
-const char *WLAN_AP_PASSWORD = "123456789";   //"44deun23ssv";
+const char *WLAN_AP_SSID = "ssb-agent-";      //this is the AP name of the agent
+const char *WLAN_AP_PASSWORD = "123456789";   //simple passphrase for testing
 const byte AP_DNS_PORT = 53;
 
 //mDNS service discovery
